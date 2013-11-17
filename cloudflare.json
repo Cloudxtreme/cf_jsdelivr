@@ -1,0 +1,50 @@
+{
+    
+    "name": "jsDelivr",
+    "description": "A free public CDN for developers and webmasters.",
+    "version": "0.1",
+    "category": "library",
+    "main": "public/javascripts/jsdelivr.js",
+    "config":{
+        "details":{
+            "Language": "English",
+            "Price": "Free",
+            "Restrictions": "None",
+            "TOS":"http://www.cloudflare.com/terms",
+            "has_js": true
+        }, 
+        "assets":{
+            "logos" : {
+                "200px": "./public/images/logo-200.png",
+                "132px": "./public/images/logo-132.png"
+            }
+        },
+        "interface": [
+            {
+                "type": "string",
+                "id": "food",
+                "name": "Favorite Food",
+                "description": "Please tell us your favorite food.",
+                "domain_request": true,
+                "private": true
+            },
+            {
+                "type": "select",
+                "id": "lottery",
+                "name": "Do you Lotto?",
+                "description": "Choose whether to buy a ticket",
+                "options": [
+                    {
+                        "label": "Yes, buy a ticket!",
+                        "value": "true"
+                    },
+                    {
+                        "label": "No, I am scared.",
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }    
+}
+
