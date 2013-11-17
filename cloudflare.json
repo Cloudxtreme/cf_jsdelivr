@@ -1,8 +1,8 @@
 {
     
-    "name": "jsDelivr",
-    "description": "A free public CDN for developers and webmasters.",
-    "version": "0.1",
+    "name": "jsDelivr Libraries",
+    "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
+    "version": "0.1.1",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
     "config":{
@@ -22,25 +22,105 @@
         "interface": [
             {
                 "type": "string",
-                "id": "food",
-                "name": "Favorite Food",
-                "description": "Please tell us your favorite food.",
-                "domain_request": true,
-                "private": true
+                "id": "test",
+                "name": "Text",
+                "description": "Something",
+                "domain_request": false,
+                "private": false
             },
             {
                 "type": "select",
-                "id": "lottery",
-                "name": "Do you Lotto?",
-                "description": "Choose whether to buy a ticket",
+                "id": "jquery",
+                "name": "Load jQuery",
+                "description": "jQuery Library Minifed Stable v2.0.3",
                 "options": [
                     {
-                        "label": "Yes, buy a ticket!",
+                        "label": "Load jQuery",
                         "value": "true"
                     },
                     {
-                        "label": "No, I am scared.",
-                        "value": ""
+                        "label": "Don't load jQuery",
+                        "value": "false"
+                    }
+                ]
+            },
+			{
+                "type": "select",
+                "id": "mootools",
+                "name": "Load MooTools",
+                "description": "MooTools Library Minifed Stable v1.4.5",
+                "options": [
+                    {
+                        "label": "Load MooTools",
+                        "value": "true"
+                    },
+                    {
+                        "label": "Don't load MooTools",
+                        "value": "false"
+                    }
+                ]
+            },
+			   {
+                "type": "select",
+                "id": "backbone",
+                "name": "Load backbone.js",
+                "description": "backbone.js Library Minifed Stable v1.1.0",
+                "options": [
+                    {
+                        "label": "Load jQuery",
+                        "value": "true"
+                    },
+                    {
+                        "label": "Don't load jQuery",
+                        "value": "false"
+                    }
+                ]
+            },
+			   {
+                "type": "select",
+                "id": "underscore",
+                "name": "Load Underscore",
+                "description": "Underscore Library Minifed Stable v1.5.2",
+                "options": [
+                    {
+                        "label": "Load Underscore",
+                        "value": "true"
+                    },
+                    {
+                        "label": "Don't load Underscore",
+                        "value": "false"
+                    }
+                ]
+            },
+			{
+                "type": "select",
+                "id": "jquerycookie",
+                "name": "Load jQuery.Cookie",
+                "description": "jQuery.Cookie plugin Minifed Stable v1.4.0 by Klaus Hartl",
+                "options": [
+                    {
+                        "label": "Load jQuery.Cookie",
+                        "value": "true"
+                    },
+                    {
+                        "label": "Don't load jQuery.Cookie",
+                        "value": "false"
+                    }
+                ]
+            },
+			{
+                "type": "select",
+                "id": "mustache",
+                "name": "Load mustache.js",
+                "description": "mustache.js library Minifed Stable v0.7.3 by Jan Lehnardt",
+                "options": [
+                    {
+                        "label": "Load mustache.js",
+                        "value": "true"
+                    },
+                    {
+                        "label": "Don't load mustache.js",
+                        "value": "false"
                     }
                 ]
             }
