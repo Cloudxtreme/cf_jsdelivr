@@ -21,106 +21,98 @@
         },
         "interface": [
             {
-                "type": "string",
-                "id": "test",
-                "name": "Text",
-                "description": "Something",
-                "domain_request": false,
-                "private": false
-            },
-            {
                 "type": "select",
                 "id": "jquery",
-                "name": "Load jQuery",
-                "description": "jQuery Library Minifed Stable v2.0.3",
+                "name": "jQuery",
+                "description": "jQuery Library Minified Stable v2.0.3",
                 "options": [
-                    {
-                        "label": "Load jQuery",
-                        "value": "true"
-                    },
                     {
                         "label": "Don't load jQuery",
                         "value": "false"
+                    },
+                    {
+                        "label": "Load jQuery",
+                        "value": "true"
                     }
                 ]
             },
 			{
                 "type": "select",
                 "id": "mootools",
-                "name": "Load MooTools",
-                "description": "MooTools Library Minifed Stable v1.4.5",
+                "name": "MooTools",
+                "description": "MooTools Library Minified Stable v1.4.5",
                 "options": [
-                    {
-                        "label": "Load MooTools",
-                        "value": "true"
-                    },
                     {
                         "label": "Don't load MooTools",
                         "value": "false"
+                    },
+                    {
+                        "label": "Load MooTools",
+                        "value": "true"
                     }
                 ]
             },
 			   {
                 "type": "select",
                 "id": "backbone",
-                "name": "Load backbone.js",
-                "description": "backbone.js Library Minifed Stable v1.1.0",
+                "name": "Backbone.js",
+                "description": "Backbone.js Library Minified Stable v1.1.0",
                 "options": [
                     {
-                        "label": "Load jQuery",
-                        "value": "true"
+                        "label": "Don't load Backbone",
+                        "value": "false"
                     },
                     {
-                        "label": "Don't load jQuery",
-                        "value": "false"
+                        "label": "Load Backbone",
+                        "value": "true"
                     }
                 ]
             },
 			   {
                 "type": "select",
                 "id": "underscore",
-                "name": "Load Underscore",
-                "description": "Underscore Library Minifed Stable v1.5.2",
+                "name": "Underscore",
+                "description": "Underscore Library Minified Stable v1.5.2",
                 "options": [
-                    {
-                        "label": "Load Underscore",
-                        "value": "true"
-                    },
                     {
                         "label": "Don't load Underscore",
                         "value": "false"
+                    },
+                    {
+                        "label": "Load Underscore",
+                        "value": "true"
                     }
                 ]
             },
 			{
                 "type": "select",
                 "id": "jquerycookie",
-                "name": "Load jQuery.Cookie",
-                "description": "jQuery.Cookie plugin Minifed Stable v1.4.0 by Klaus Hartl",
+                "name": "jQuery.Cookie",
+                "description": "jQuery.Cookie plugin Minified Stable v1.4.0 by Klaus Hartl",
                 "options": [
-                    {
-                        "label": "Load jQuery.Cookie",
-                        "value": "true"
-                    },
                     {
                         "label": "Don't load jQuery.Cookie",
                         "value": "false"
+                    },
+                    {
+                        "label": "Load jQuery.Cookie",
+                        "value": "true"
                     }
                 ]
             },
 			{
                 "type": "select",
                 "id": "mustache",
-                "name": "Load mustache.js",
-                "description": "mustache.js library Minifed Stable v0.7.3 by Jan Lehnardt",
+                "name": "mustache.js",
+                "description": "mustache.js library Minified Stable v0.7.3",
                 "options": [
-                    {
-                        "label": "Load mustache.js",
-                        "value": "true"
-                    },
                     {
                         "label": "Don't load mustache.js",
                         "value": "false"
+                    },
+                    {
+                        "label": "Load mustache.js",
+                        "value": "true"
                     }
                 ]
             }
