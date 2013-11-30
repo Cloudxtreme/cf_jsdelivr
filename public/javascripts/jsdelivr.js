@@ -1,6 +1,4 @@
-CloudFlare.define(
-    'jsdelivr',
-    ['jsdelivr/config'],
+CloudFlare.define('jsdelivr', ['jsdelivr/config'],
     function(config) {
         var libs = {
             jquery: 'cdn.jsdelivr.net/jquery/2.0.3/jquery-2.0.3.min.js',
