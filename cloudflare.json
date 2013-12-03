@@ -24,7 +24,7 @@
                 "type": "select",
                 "id": "jquery",
                 "name": "jQuery",
-                "description": "jQuery Library Minified Stable v2.0.3",
+                "description": "jQuery Library Minified Latest Stable",
                 "options": [
                     {
                         "label": "Don't load jQuery",
@@ -40,7 +40,7 @@
                 "type": "select",
                 "id": "mootools",
                 "name": "MooTools",
-                "description": "MooTools Library Minified Stable v1.4.5",
+                "description": "MooTools Library Minified Latest Stable",
                 "options": [
                     {
                         "label": "Don't load MooTools",
@@ -56,7 +56,7 @@
                 "type": "select",
                 "id": "backbone",
                 "name": "Backbone.js",
-                "description": "Backbone.js Library Minified Stable v1.1.0",
+                "description": "Backbone.js Library Minified Latest Stable",
                 "options": [
                     {
                         "label": "Don't load Backbone",
@@ -72,7 +72,7 @@
                 "type": "select",
                 "id": "underscore",
                 "name": "Underscore",
-                "description": "Underscore Library Minified Stable v1.5.2",
+                "description": "Underscore Library Minified Latest Stable",
                 "options": [
                     {
                         "label": "Don't load Underscore",
@@ -88,7 +88,7 @@
                 "type": "select",
                 "id": "jquerycookie",
                 "name": "jQuery.Cookie",
-                "description": "jQuery.Cookie plugin Minified Stable v1.4.0 by Klaus Hartl",
+                "description": "jQuery.Cookie plugin Minified Latest Stable by Klaus Hartl",
                 "options": [
                     {
                         "label": "Don't load jQuery.Cookie",
@@ -104,7 +104,7 @@
                 "type": "select",
                 "id": "mustache",
                 "name": "mustache.js",
-                "description": "mustache.js library Minified Stable v0.7.3",
+                "description": "mustache.js library Minified Latest Stable",
                 "options": [
                     {
                         "label": "Don't load mustache.js",
