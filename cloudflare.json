@@ -2,7 +2,7 @@
     
     "name": "jsDelivr CDN",
     "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
     "config":{
