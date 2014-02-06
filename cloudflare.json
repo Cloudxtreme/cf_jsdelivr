@@ -1,8 +1,8 @@
 {
     
-    "name": "DELETEME",
+    "name": "jsDelivr CDN",
     "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
     "config":{
