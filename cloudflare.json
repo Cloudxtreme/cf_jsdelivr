@@ -1,122 +1,55 @@
 {
-    
+
     "name": "jsDelivr CDN",
     "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
     "version": "0.1.9",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
-    "config":{
-        "details":{
+    "config": {
+        "details": {
             "Language": "English",
             "Price": "Free",
             "Restrictions": "None",
-            "TOS":"http://www.cloudflare.com/terms",
+            "TOS": "http://www.cloudflare.com/terms",
             "has_js": true
-        }, 
-        "assets":{
-            "logos" : {
+        },
+        "assets": {
+            "logos": {
                 "200px": "./public/images/logo-200.png",
                 "132px": "./public/images/logo-132.png"
             }
         },
-        "interface": [
-            {
-                "type": "select",
-                "id": "jquery",
-                "name": "jQuery",
-                "description": "jQuery Library Minified Latest Stable",
-                "options": [
-                    {
-                        "label": "Don't load jQuery",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load jQuery",
-                        "value": "true"
-                    }
-                ]
-            },
-			{
-                "type": "select",
-                "id": "mootools",
-                "name": "MooTools",
-                "description": "MooTools Library Minified Latest Stable",
-                "options": [
-                    {
-                        "label": "Don't load MooTools",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load MooTools",
-                        "value": "true"
-                    }
-                ]
-            },
-			   {
-                "type": "select",
-                "id": "backbone",
-                "name": "Backbone.js",
-                "description": "Backbone.js Library Minified Latest Stable",
-                "options": [
-                    {
-                        "label": "Don't load Backbone",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load Backbone",
-                        "value": "true"
-                    }
-                ]
-            },
-			   {
-                "type": "select",
-                "id": "underscore",
-                "name": "Underscore",
-                "description": "Underscore Library Minified Latest Stable",
-                "options": [
-                    {
-                        "label": "Don't load Underscore",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load Underscore",
-                        "value": "true"
-                    }
-                ]
-            },
-			{
-                "type": "select",
-                "id": "jquerycookie",
-                "name": "jQuery.Cookie",
-                "description": "jQuery.Cookie plugin Minified Latest Stable by Klaus Hartl",
-                "options": [
-                    {
-                        "label": "Don't load jQuery.Cookie",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load jQuery.Cookie",
-                        "value": "true"
-                    }
-                ]
-            },
-			{
-                "type": "select",
-                "id": "mustache",
-                "name": "mustache.js",
-                "description": "mustache.js library Minified Latest Stable",
-                "options": [
-                    {
-                        "label": "Don't load mustache.js",
-                        "value": "false"
-                    },
-                    {
-                        "label": "Load mustache.js",
-                        "value": "true"
-                    }
-                ]
-            }
-        ]
-    }    
+        "interface": [{
+            "type": "string",
+            "id": "libraries",
+            "name": "JavaScript Libraries",
+            "description": "Please add your libraries here",
+            "domain_request": true,
+            "private": true
+        }, {
+            "type": "select",
+            "id": "combined",
+            "name": "Combine libraries",
+            "description": "Choose whether to load your libraries in a single bundled request or as individual requests (one per file)",
+            "options": [{
+                "label": "Yes",
+                "value": "true"
+            }, {
+                "label": "No",
+                "value": ""
+            }]
+        }, {
+            "type": "select",
+            "id": "cedexis",
+            "name": "Cedexis",
+            "description": "Choose whether to contribute to Cedexis stats",
+            "options": [{
+                "label": "Yes",
+                "value": "true"
+            }, {
+                "label": "No",
+                "value": ""
+            }]
+        }]
+    }
 }
-

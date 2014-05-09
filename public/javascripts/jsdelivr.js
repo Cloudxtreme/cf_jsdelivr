@@ -1,23 +1,88 @@
-CloudFlare.define('jsdelivr', ['jsdelivr/config'],
-    function(config) {
-        var libs = {
-            jquery: 'cdn.jsdelivr.net/jquery/2.0.3/jquery-2.0.3.min.js',
-            mootools: 'cdn.jsdelivr.net/mootools/1.4.5/mootools-core-1.4.5-full-compat.js',
-            backbone: 'cdn.jsdelivr.net/backbonejs/1.1.0/backbone-min.js',
-            underscore: 'cdn.jsdelivr.net/underscorejs/1.5.2/underscore-min.js',
-            jquerycookie: 'cdn.jsdelivr.net/jquery.cookie/1.3/jquery.cookie.js',
-            mustache: 'cdn.jsdelivr.net/mustache.js/0.7.3/mustache.min.js'
-        };
+'use strict';
 
-		Object.keys(libs).forEach(function(id) {
-        // load the libs here
-			if(config[id] == 'true'){
-				var a = document.createElement('script');
-				a.type = 'text/javascript';
-				a.src = '//' + libs[id];
-				document.body.appendChild(a);
-			}			
-			
-		});
-    }
-);
+CloudFlare.define('cfdelivr', ['cloudflare/dom', 'jsdelivr/config'], function (dom, _config) {
+    var JSDelivr = function (config) {
+        this.baseUrl = '//cdn.jsdelivr.net';
+        this.config = config;
+    };
+
+    JSDelivr.prototype.initialize = function () {
+        var libraries;
+
+        if (!this.config.libraries) {
+            return;
+        }
+
+        if (this.config.combined) {
+            libraries = this.baseUrl + '/g/' + this.config.libraries;
+        } else {
+            libraries = this.parseLibraries(this.config.libraries);
+        }
+
+        this.addScripts(libraries);
+
+        if (this.config.cedexis) {
+            this.useCedexis();
+        }
+    };
+
+    JSDelivr.prototype.addScripts = function (urls) {
+        if (typeof urls === 'string') {
+            urls = [urls];
+        }
+
+        var referenceNode = document.getElementsByTagName('script')[0],
+            script;
+
+        for (var i = 0; i < urls.length; i++) {
+            script = dom.createElement('script');
+            script.type = 'text/javascript';
+            script.src = urls[i];
+
+            referenceNode.parentNode.appendChild(script);
+        }
+    };
+
+    JSDelivr.prototype.parseLibraries = function (libraries) {
+        var pattern = /^([a-z0-9\.\-_]+)([@a-z0-9\.\-_]+)?(\(.+\))?/i,
+            urls = [],
+            url, parts, name, version, files, file;
+
+        libraries = libraries.replace(/\s/g, '');
+        libraries = libraries.split(',');
+
+        for (var i = 0; i < libraries.length; i++) {
+            url = libraries[i];
+
+            parts = pattern.exec(url);
+
+            name = parts[1];
+            version = (parts[2] || 'latest').replace('@', '');
+            files = (parts[3] || 'mainfile').replace('(', '').replace(')', '').split('+');
+
+            for (var j = 0; j < files.length; j++) {
+                file = files[j];
+                urls.push(this.baseUrl + '/' + name + '/' + version + '/' + file);
+            }
+        }
+
+        return urls;
+    };
+
+    JSDelivr.prototype.useCedexis = function () {
+        dom.onLoad.then(function () {
+            var script = dom.createElement('script');
+            script.type = 'text/javascript';
+            script.async = 'async';
+            script.src = '//' +
+                (window.location.protocol === 'https:' ? 's3.amazonaws.com/cdx-radar/' : 'radar.cedexis.com/') +
+                '01-11475-radar10.min.js';
+            document.body.appendChild(script);
+        });
+    };
+
+    var jsdelivr = new JSDelivr(_config);
+
+    jsdelivr.initialize();
+
+});
