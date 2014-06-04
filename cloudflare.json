@@ -2,7 +2,7 @@
 
     "name": "jsDelivr CDN",
     "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
     "config": {
@@ -25,12 +25,14 @@
             "name": "JavaScript Libraries",
             "description": "Please add your libraries here",
             "domain_request": true,
-            "private": true
+            "private": false
         }, {
             "type": "select",
             "id": "combined",
             "name": "Combine libraries",
             "description": "Choose whether to load your libraries in a single bundled request or as individual requests (one per file)",
+            "domain_request": true,
+            "private": false,
             "options": [{
                 "label": "Yes",
                 "value": "true"
@@ -43,6 +45,8 @@
             "id": "cedexis",
             "name": "Cedexis",
             "description": "Choose whether to contribute to Cedexis stats",
+            "domain_request": true,
+            "private": false,
             "options": [{
                 "label": "Yes",
                 "value": "true"
