@@ -1,6 +1,6 @@
 'use strict';
 
-CloudFlare.define('cfdelivr', ['cloudflare/dom', 'jsdelivr/config'], function (dom, _config) {
+CloudFlare.define('jsdelivr', ['cloudflare/dom', 'jsdelivr/config'], function (dom, _config) {
     var JSDelivr = function (config) {
         this.baseUrl = '//cdn.jsdelivr.net';
         this.config = config;
