@@ -2,7 +2,7 @@
 
     "name": "jsDelivr CDN",
     "description": "Load popular JS libraries in your websites using the huge global network of jsDelivr CDN",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "category": "library",
     "main": "public/javascripts/jsdelivr.js",
     "config": {
@@ -35,10 +35,10 @@
             "private": false,
             "options": [{
                 "label": "Yes",
-                "value": "true"
+                "value": "yes"
             }, {
                 "label": "No",
-                "value": ""
+                "value": "no"
             }]
         }, {
             "type": "select",
@@ -49,10 +49,10 @@
             "private": false,
             "options": [{
                 "label": "Yes",
-                "value": "true"
+                "value": "yes"
             }, {
                 "label": "No",
-                "value": ""
+                "value": "no"
             }]
         }]
     }

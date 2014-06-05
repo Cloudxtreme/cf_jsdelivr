@@ -13,7 +13,7 @@ CloudFlare.define('jsdelivr', ['cloudflare/dom', 'jsdelivr/config'], function (d
             return;
         }
 
-        if (this.config.combined) {
+        if (this.config.combined && (this.config.combined || '').toLowerCase() === 'yes') {
             libraries = this.baseUrl + '/g/' + this.config.libraries;
         } else {
             libraries = this.parseLibraries(this.config.libraries);
@@ -21,7 +21,7 @@ CloudFlare.define('jsdelivr', ['cloudflare/dom', 'jsdelivr/config'], function (d
 
         this.addScripts(libraries);
 
-        if (this.config.cedexis) {
+        if (this.config.cedexis || (this.config.cedexis || '').toLowerCase() === 'yes') {
             this.useCedexis();
         }
     };
